@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .blurred {
+      filter: blur(5px); /* Add the desired blur effect */
+    }
+    body {
+      /* Set background image and control its properties */
+      background-image: url('your-background-image.jpg');
+      background-size: cover; /* Adjust the background size as needed */
+      background-repeat: no-repeat; /* Prevent image from repeating */
+      background-attachment: fixed; /* Fixed background for the entire page */
+    }
+  </style>
+</head>
+<body>
+
+<h2>Enter your details</h2>
+
+<form>
+  <!-- Your form elements here -->
+</form>
+
+<p>Note that the form itself is not visible.</p>
+<p>Also note that the default width of text input fields is 20 characters.</p>
+
+<script>
+  // JavaScript to add blur effect on focus loss
+  const inputFields = document.querySelectorAll('input');
+
+  inputFields.forEach(input => {
+    input.addEventListener('blur', () => {
+      input.classList.add('blurred');
+    });
+  });
+</script>
+
+</body>
+</html>
+
